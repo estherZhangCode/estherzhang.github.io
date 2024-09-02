@@ -1,0 +1,231 @@
+---
+title: 关于swiftUI的依赖注入
+commentable: flase
+Edit: 2023-07-14
+mathjax: true
+mermaid: true
+tags: swiftUI
+categories: swift
+description: 关于swiftUI的依赖注入库探究
+---
+## Introduction
+
+### Why SwiftUI Need DI
+
+- Can be handy for overriding dependencies for tests and SwiftUI previews, as well as specific user flows such as onboarding experiences.
+
+- Make sure you overrode all dependencies a feature uses in tests. 
+
+- Can propagate dependencies throughout your entire application
+
+- Controllable dependencies can both useful for test & preview, override the dependency can save time (override dependencies just for previews without affecting how your app will run in production.)
+
+- By controlling the dependencies our features need to do their jobs we gain the ability to completely alter the execution context a feature runs in.
+
+- Help complete fast, iterative nature of previews.makes this feature much friendlier to Xcode previews and testing
+
+we pick two DI Library —— Swift Dependency & Factory, and want to research difference between these two library, may pick a more easier to get start library as swiftUI DI library.
+
+### How To Get Start With Those Library
+
+- Swift Dependency
+
+1. Create a type that conforms to the DependencyKey protocol
+
+```swift
+private enum APIClientKey: DependencyKey {  
+	static let liveValue = APIClient.live
+}
+
+//If the dependency you are registering is a type that you own, then you can conform it directly to the protocol
+extension APIClient: DependencyKey {
+  static let liveValue = APIClient.live
+}
+
+// testValue it will be used when running features in tests,
+//and if you implement previewValue it will be used while running features in an Xcode preview.
+```
+
+2. An extension must be made to DependencyValues to expose a computed property for the dependency:
+
+```swift
+extension DependencyValues {
+  var apiClient: APIClient {
+    get { self[APIClientKey.self] }
+    set { self[APIClientKey.self] = newValue }
+  }
+}
+```
+
+3. Instantly access your API client dependency from any part of you code base
+
+```swift
+final class TodosModel: ObservableObject {  
+	@Dependency(\.apiClient) var apiClient  
+	// ...
+}
+```
+
+- Factory
+
+1. Register dependency
+
+```swift
+extension Container { 
+  var service: Factory<MyServiceType> { 
+    self { MyService() } 
+  }
+}
+//The registered dependency returns a new version of MyServiceType whenever it’s asked to do so
+```
+And you can define scoped 
+
+```swift
+extension Container { 
+  var cachedService: Factory<MyServiceType> { 
+    self { MyService() } .cached
+  } 
+  var singletonService: Factory<SimpleService> { 
+    self { SimpleService() } .singleton
+  }
+}
+```
+
+2. Resolve dependency
+
+- Shared Class Container
+
+```swift
+class ContentViewModel: ObservableObject { 
+  let service = Container.shared.constructedService()
+}
+```
+
+- Initialization from Passed Container
+
+```swift
+class ContentViewModel: ObservableObject { 
+  let service2: MyServiceType init(container: Container) { 
+    service2 = container.service() } 
+}
+```
+
+- Lazy Initialization from Passed Container
+
+```swift
+class ContentViewModel: ObservableObject { 
+  private let container: Container 
+  private lazy var service4: MyServiceType = container.cachedService() 
+  private lazy var service5: SimpleService = container.singletonService() 
+  init(container: Container) { 
+    self.container = container } 
+  }
+```
+
+- Injected Property Wrappers
+
+```swift
+class ContentViewModel: ObservableObject { 
+// Injected property from default container 
+@Injected(\.constructedService) var constructed 
+// Injected property from custom container 
+@Injected(\MyContainer.anotherService) var anotherService 
+// LazyInjected property from custom container 
+@LazyInjected(\MyContainer.myLazyService) var myLazyService }
+```
+
+## Dependency lifetimes In These Two Library
+
+- Swift Dependency
+The scope in SD is similar to how @TaskLocal values are inherited by new asynchronous tasks as dependencies are held as a @TaskLocal.
+
+  - Basic Knowledge about task local
+
+    - Task locals sound like a “global” variable, but it’s features make them safe to use
+
+      - multiple tasks can access the same task local without fear of a race condition.
+
+      - It is not allowed to forever mutate a task local in a way that all parts of the application observe the change.
+
+      - dependencies are inherited in tasks but not generally across escaping boundaries.
+
+    - “task local inheritance” make task locals to prolong their changes outside the scope of a non-escaping closure —— child tasks created via TaskGroup or async let, as well as tasks created with Task { }, inherit the task locals at the moment they were created.
+
+  - LifeTime about dependency
+
+    - Dependencies are inherited in tasks but not generally across escaping boundaries, dependency’s value can be changed for the scope of the trailing, non-escaping closure of withDependencies(_:operation:)
+
+      - For withDependencies(_:operation:) , the first allows you to override any dependencies you want, and the second allows you to execute your feature’s logic in a scope where those dependency mutations are applied:
+      ```swift
+	  func testOnAppear() async {
+	    await withDependencies {
+	      $0.apiClient.fetchUser = { _ in User(id: 42, name: "Blob") }
+	    } operation: {
+	      let model = FeatureModel()
+	      XCTAssertEqual(model.user, nil)
+	      await model.onAppear()
+	      XCTAssertEqual(model.user, User(id: 42, name: "Blob"))
+	    }
+	  }
+	  
+	  func testOnAppear() async {
+	    let model = withDependencies {
+	      $0.apiClient.fetchUser = { _ in User(id: 42, name: "Blob") }
+	    } operation: {
+	      FeatureModel()
+	    }
+	  
+	    XCTAssertEqual(model.user, nil)
+	    await model.onAppear()
+	    XCTAssertEqual(model.user, User(id: 42, name: "Blob"))
+	  }
+      ```
+
+      - In general, if you want dependencies to be properly inherited through every layer of feature in your application, you should make sure to create any ObservableObject models inside a withDependencies(from:operation:file:line:) scope.
+
+- Factory
+Scope is managed by the container. When a scope is associated with a Factory the first time the dependency is resolved a reference to that object is cached. 
+
+  - Scope Types
+
+    - Singleton
+      whenever someone requests an instance of myService they’ll get the same instance of the object as everyone else. Singletons are global and they’re not managed by any particular container.
+
+    - CachedCached 
+      items are persisted until the cache is reset or the container is deallocated. 
+
+    - SharedShared 
+      items exist just as long as someone holds a strong reference to them. When the last reference goes away, the weakly held shared reference also goes away.
+
+    - GraphThis 
+      scope will reuse any factory instances resolved during a given resolution cycle. 
+
+    - Unique
+     【Default】When unique is specified a new instance of the service will be instantiated and returned each and every time one is requested from the factory.
+
+
+## General Difference Between These Two Library
+
+- Swift Dependency comes with many common dependencies, like UUID, Clocks
+
+- Swift Dependency have Live value、Test value、Preview value, easy to distinguish data run on simulator or on a device and for test or preview. Help to separating interface and implementation.
+
+- Swift Dependency register dependency is similar to registering an environment value in SwiftUI
+
+- Swift Dependency’s dependency are held as a @TaskLocal, value is in a linked list. Factory provide some scope types to define the lifetime of resolved dependencies. Factory may more familiar to use，but Swift Dependency is more pithy.
+
+- Factory provides a “time to live” option for scoped dependencies.
+
+```swift
+extension Container {
+    var testUser: Factory<TestUser> { 
+        self { TestUser() }
+            .scope(.session)
+            .timeToLive(60 * 20) // (60 seconds * 20) = 20 mins
+    }
+}
+```
+
+## Demo For Basic Usage Of These Two Library
+
+https://github.com/estherzhangyue/DIDemo
