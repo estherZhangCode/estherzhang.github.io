@@ -21,7 +21,6 @@
       <span class="nav-gesture" aria-hidden="true"><i></i></span>
       <div class="nav-links"><a href="#work">Work</a><a href="#about">About</a></div>
       <span class="nav-indicator" aria-hidden="true"></span>
-      <span class="nav-ring" aria-hidden="true"></span>
     </nav>
     <div class="header-meta">
       <span class="availability"><i></i> Available</span>
@@ -36,22 +35,30 @@
         <h1 id="hero-title">Yue Zhang</h1>
         <p class="hero-subtitle">Building reliable mobile products<br>and AI-powered engineering workflows.</p>
       </div>
-      <div class="hero-world reveal" aria-label="A playful landscape built from Yue's mobile engineering work">
-        <div class="world-glow"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="code-island">
-          <div class="app-tile swift" data-depth="0.9"><span>Swift</span><b>{ }</b></div>
-          <div class="app-tile flutter" data-depth="1.4"><span>Flutter</span><b>◇</b></div>
-          <div class="app-tile ai-native" data-depth="1.7"><span>AI Native</span><b>✦</b><small>build · automate · ship</small></div>
-          <div class="app-tile product" data-depth="0.6"><span>Product</span><b>↗</b></div>
-          <div class="bridge" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-          <div class="path path-one"></div><div class="path path-two"></div>
-          <div class="code-sign"><span>iOS</span><span>Flutter</span><span>UX</span></div>
-          <div class="code-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="tiny-person" aria-hidden="true"><span></span></div>
-          <div class="ai-skill-cloud" aria-label="AI Native skills">
-            <span>Agentic coding</span><span>Rapid prototypes</span><span>Review skills</span><span>Release automation</span><span>AI-assisted delivery</span>
-          </div>
-          <div class="island-sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="hero-world reveal" aria-label="Yue's mobile engineering and AI-native capabilities">
+        <div class="world-glow" aria-hidden="true"></div>
+        <div class="skill-orbit orbit-outer" aria-hidden="true"></div>
+        <div class="skill-orbit orbit-inner" aria-hidden="true"></div>
+        <div class="ai-core" data-depth="1.2">
+          <span class="core-kicker">AI Native</span>
+          <b aria-hidden="true">✦</b>
+          <strong>Build smarter.</strong>
+          <small>Prototype · automate · review · ship</small>
+        </div>
+        <article class="skill-node skill-swift" data-depth="0.65">
+          <div class="skill-node-meta"><i></i><span>01</span></div>
+          <strong>Swift</strong><small>SwiftUI · UIKit · TCA</small><b aria-hidden="true">{ }</b>
+        </article>
+        <article class="skill-node skill-flutter" data-depth="0.9">
+          <div class="skill-node-meta"><i></i><span>02</span></div>
+          <strong>Flutter</strong><small>Riverpod · GetX · Pigeon</small><b aria-hidden="true">◇</b>
+        </article>
+        <article class="skill-node skill-product" data-depth="0.5">
+          <div class="skill-node-meta"><i></i><span>03</span></div>
+          <strong>Product engineering</strong><small>UX detail · ownership · delivery</small><b aria-hidden="true">↗</b>
+        </article>
+        <div class="skill-rail" aria-label="AI-native engineering skills">
+          <span>Agentic coding</span><span>Rapid prototypes</span><span>Review systems</span><span>Release automation</span>
         </div>
         <p class="world-caption">Mobile craft × AI leverage × product ownership</p>
       </div>
@@ -137,27 +144,26 @@
         </div>
         <div class="company-list">
           <article class="company-row">
-            <div class="company-logo logo-kn" data-logo-needed="KN Group"><span>KN</span></div>
+            <div class="company-logo logo-kn"><img src="img/kn.jpeg" alt="KN Group logo"></div>
             <div class="company-copy"><strong>Senior iOS Engineer</strong><span>KN Group · Cashmex</span></div>
             <time>Present</time>
           </article>
           <article class="company-row">
-            <div class="company-logo logo-liulishuo" data-logo-needed="Liulishuo"><span>流</span></div>
+            <div class="company-logo logo-liulishuo"><img src="img/lls.jpeg" alt="英语流利说 logo"></div>
             <div class="company-copy"><strong>iOS / Flutter Engineer</strong><span>Liulishuo</span></div>
             <time>2025</time>
           </article>
           <article class="company-row">
-            <div class="company-logo logo-wiredcraft" data-logo-needed="Wiredcraft"><span>W</span></div>
+            <div class="company-logo logo-wiredcraft"><img src="img/wiredcraft.jpeg" alt="Wiredcraft logo"></div>
             <div class="company-copy"><strong>iOS / Flutter Engineer</strong><span>Wiredcraft</span></div>
             <time>2021 — 2024</time>
           </article>
           <article class="company-row">
-            <div class="company-logo logo-leica" data-logo-needed="Leica Geosystems"><span>L</span></div>
+            <div class="company-logo logo-leica"><img src="img/leica.jpeg" alt="Leica Geosystems logo"></div>
             <div class="company-copy"><strong>iOS Engineer</strong><span>Leica Geosystems</span></div>
             <time>2018 — 2021</time>
           </article>
         </div>
-        <p class="logo-note">Company marks are temporary placeholders · logos welcome</p>
       </div>
     </section>
 
@@ -168,48 +174,50 @@
       </div>
       <div class="project-list">
         <a class="project-card project-wide reveal" href="img/portfolio-1.jpg" target="_blank" rel="noopener">
-          <img src="img/portfolio-1.jpg" alt="Cybex SensorSafe mobile app displayed on two phones"><div class="project-overlay"></div>
-          <div class="project-info"><span>01 · Connected product</span><h3>Cybex SensorSafe</h3><p>Led the Flutter product from zero to one, including architecture, native communication and long-term delivery.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
+          <img src="img/portfolio-1.jpg" alt="Cashmex financial product displayed on two iPhones"><div class="project-overlay"></div>
+          <div class="project-info"><span>01 · Fintech · iOS</span><h3>Cashmex</h3><p>Owned the complete iOS delivery, from SwiftUI architecture and secure networking to testing, release and App Store submission.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
         </a>
         <div class="project-pair">
           <a class="project-card project-image-right reveal" href="img/portfolio-2.jpg" target="_blank" rel="noopener">
-            <img src="img/portfolio-2.jpg" alt="Adidas commerce experience shown on two phones"><div class="project-overlay"></div>
-            <div class="project-info"><span>02 · Commerce</span><h3>Adidas</h3><p>SwiftUI, TCA and polished interactive shopping experiences at scale.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
+            <img src="img/portfolio-2.jpg" alt="English Liulishuo learning experience displayed on two iPhones"><div class="project-overlay"></div>
+            <div class="project-info"><span>02 · Education · iOS</span><h3>Liulishuo English</h3><p>Built course, community and live-learning experiences, including a reusable player upgrade and high-performance topic feeds.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
           </a>
-          <a class="project-card reveal" href="img/portfolio-3.jpg" target="_blank" rel="noopener">
-            <img src="img/portfolio-3.jpg" alt="Confirmed sneaker shopping app shown on two phones"><div class="project-overlay"></div>
-            <div class="project-info"><span>03 · Sneaker culture</span><h3>CONFIRMED</h3><p>A reusable order-list system plus 3D card, lighting and result animations.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
+          <a class="project-card reveal" href="https://apps.apple.com/cn/app/richmee-expense-budget-tracker/id6752465398?l=en-GB" target="_blank" rel="noopener">
+            <img src="img/portfolio-3.jpg" alt="Richmee expense and achievement app displayed on three iPhones"><div class="project-overlay"></div>
+            <div class="project-info"><span>03 · Personal product · Flutter</span><h3>Richmee</h3><p>Designed and shipped a modular finance app with expense tracking, statistics, reminders, achievements and iOS Shortcuts.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
           </a>
         </div>
         <div class="project-pair project-pair-offset">
-          <a class="project-card project-image-right reveal" href="img/portfolio-4.jpg" target="_blank" rel="noopener">
-            <img src="img/portfolio-4.jpg" alt="Zara mini program displayed on two phones"><div class="project-overlay"></div>
-            <div class="project-info"><span>04 · Mini program</span><h3>Zara</h3><p>A high-traffic WeChat experience built with JavaScript, WXML and WXSS.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
+          <a class="project-card project-image-right reveal" href="https://apps.apple.com/us/app/%E5%AE%A0%E7%89%A9%E7%88%AA-petpaw/id6783274509?l=zh-Hans-CN" target="_blank" rel="noopener">
+            <img src="img/portfolio-4.jpg" alt="PetPaw pet care app displayed on two iPhones"><div class="project-overlay"></div>
+            <div class="project-info"><span>04 · Personal product · Flutter</span><h3>PetPaw</h3><p>Independently designed, built and released a pet diary and care reminder app from concept to App Store.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
           </a>
           <a class="project-card reveal" href="img/portfolio-5.jpg" target="_blank" rel="noopener">
-            <img src="img/portfolio-5.jpg" alt="H-Mall commerce and measurement experiences shown on phones"><div class="project-overlay"></div>
-            <div class="project-info"><span>05 · Enterprise commerce</span><h3>H-Mall</h3><p>Core customer, cart, order and payment flows for Leica Geosystems.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
+            <img src="img/portfolio-5.jpg" alt="Adidas commerce experience displayed on two iPhones"><div class="project-overlay"></div>
+            <div class="project-info"><span>05 · Commerce · iOS</span><h3>Adidas</h3><p>Developed customization, size selection and high-traffic shopping experiences with SwiftUI, TCA and RxSwift.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="project-pair">
+          <a class="project-card project-image-right reveal" href="img/portfolio-6.jpg" target="_blank" rel="noopener">
+            <img src="img/portfolio-6.jpg" alt="CONFIRMED sneaker commerce app displayed on two iPhones"><div class="project-overlay"></div>
+            <div class="project-info"><span>06 · Sneaker culture · iOS</span><h3>CONFIRMED</h3><p>Created reusable order-list architecture and expressive 3D card, lighting and result animations with Core Animation.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="project-card reveal" href="img/portfolio-7.jpg" target="_blank" rel="noopener">
+            <img src="img/portfolio-7.jpg" alt="Cybex SensorSafe connected product displayed on two iPhones"><div class="project-overlay"></div>
+            <div class="project-info"><span>07 · Connected product · Flutter</span><h3>Cybex SensorSafe</h3><p>Led the Flutter product from zero to one, using GetX and Pigeon for architecture, state and native communication.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="project-pair project-pair-offset">
+          <a class="project-card project-image-right reveal" href="img/portfolio-8.jpg" target="_blank" rel="noopener">
+            <img src="img/portfolio-8.jpg" alt="Zara WeChat mini program displayed on two iPhones"><div class="project-overlay"></div>
+            <div class="project-info"><span>08 · Mini program</span><h3>Zara</h3><p>Delivered a high-traffic WeChat experience with JavaScript, WXML and WXSS, plus interactive 3D product tooling.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="project-card reveal" href="img/portfolio-9.jpg" target="_blank" rel="noopener">
+            <img src="img/portfolio-9.jpg" alt="H-Mall enterprise commerce and measurement products displayed on two iPhones"><div class="project-overlay"></div>
+            <div class="project-info"><span>09 · Enterprise commerce · iOS</span><h3>H-Mall</h3><p>Built customer, cart, order and payment flows for Leica Geosystems’ connected measurement ecosystem.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
           </a>
         </div>
       </div>
-    </section>
-
-    <section class="more-work section-shell" aria-labelledby="more-title">
-      <div class="section-heading reveal">
-        <div><p class="section-kicker">More products</p><h2 id="more-title">Still shipping.</h2></div>
-        <p>These projects are ready for their own visual stories. For now, the engineering work speaks first.</p>
-      </div>
-      <div class="product-lines">
-        <a href="https://apps.apple.com/cn/app/richmee-expense-budget-tracker/id6752465398?l=en-GB" target="_blank" rel="noopener" class="product-line reveal"><span class="product-index">06</span><strong>Richmee</strong><span>Independent Flutter finance app</span><em>App Store ↗</em></a>
-        <a href="https://apps.apple.com/us/app/%E5%AE%A0%E7%89%A9%E7%88%AA-petpaw/id6783274509?l=zh-Hans-CN" target="_blank" rel="noopener" class="product-line reveal"><span class="product-index">07</span><strong>PetPaw</strong><span>Independent pet care app</span><em>App Store ↗</em></a>
-        <div class="product-line reveal"><span class="product-index">08</span><strong>Liulishuo</strong><span>Learning, live and community experiences</span><em>Visual needed</em></div>
-        <div class="product-line reveal"><span class="product-index">09</span><strong>Cashmex</strong><span>End-to-end fintech iOS delivery</span><em>Visual needed</em></div>
-      </div>
-    </section>
-
-    <section class="play section-shell" id="play" aria-labelledby="play-title">
-      <div class="play-copy reveal"><p class="section-kicker">Play</p><h2 id="play-title">Curiosity keeps the work human.</h2><p>Outside delivery roadmaps, I explore product design, playful interfaces and small tools that turn everyday routines into something more rewarding.</p></div>
-      <a class="experiment-card reveal" href="img/portfolio-6.jpg" target="_blank" rel="noopener"><img src="img/portfolio-6.jpg" alt="Cyber Tarot mobile experience"><span>Cyber Tarot · interface experiment ↗</span></a>
     </section>
 
     <section class="contact section-shell reveal" id="contact">
