@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>张玥 - 高级前端工程师（Flutter）</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="assets/css/typo.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/about.css">
+    <style>
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 9mm 8mm;
+            }
+
+            html,
+            body {
+                width: 100%;
+                min-width: 0;
+                padding: 0;
+                margin: 0;
+                background: #fff;
+                font-size: 0.78em;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: 25% 73%;
+                column-gap: 2%;
+                width: 100%;
+                min-height: 0;
+            }
+
+            .container .side {
+                position: static;
+                grid-column: 1;
+                width: auto;
+                padding: 0.75rem;
+                box-shadow: none;
+            }
+
+            .container .side .me {
+                margin-bottom: 1rem;
+            }
+
+            .container .side .me .portrait,
+            .container .side .me .portrait img {
+                width: 6rem;
+                height: 6rem;
+            }
+
+            .container .main {
+                grid-column: 2;
+                width: auto;
+                margin-left: 0;
+                padding: 0.75rem;
+                box-shadow: none;
+            }
+
+            .container .info-unit {
+                margin-bottom: 0.55rem;
+            }
+
+            .container .main .info-unit ul li {
+                margin-bottom: 0.45rem;
+            }
+
+            .container .main .info-unit ul li .info-content li {
+                margin-bottom: 0.12rem;
+            }
+
+            .container .main .info-unit h2,
+            .container .side .info-unit h2 {
+                margin-top: 0.35rem;
+                margin-bottom: 0.15rem;
+            }
+
+            .container .main .info-unit h3 {
+                margin-top: 0.25rem;
+                margin-bottom: 0.15rem;
+            }
+
+            .container .main .info-unit p {
+                margin-top: 0.1rem;
+                margin-bottom: 0.18rem;
+                line-height: 1.15;
+            }
+
+            .container .side .info-unit p,
+            .container .side .info-unit li {
+                line-height: 1.15;
+            }
+
+            .container .side .skill {
+                font-size: 0.9em;
+                margin-bottom: 0.2rem;
+            }
+
+            .container .side .skill p {
+                margin-top: 0;
+                margin-bottom: 0.08rem;
+                line-height: 1.05;
+            }
+
+            /* The professional-skills block already covers this information in print. */
+            .container .side .skill {
+                display: none;
+            }
+
+            .container .info-unit,
+            .container .main .info-unit > ul > li {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .container .main .project {
+                break-inside: auto;
+                page-break-inside: auto;
+            }
+
+            .container .main > .project:nth-of-type(2) {
+                break-before: page;
+                page-break-before: always;
+            }
+
+            .footer {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header"></header>
+    <article class="container">
+        <section class="side" id="side">
+            <section class="me">
+                <section class="portrait"><img class="avatar" src="assets/images/card.jpg" alt="张玥"></section>
+                <h1 class="name"><strong>意向岗位</strong></h1>
+                <h4 class="info-job"><strong>高级前端工程师（Flutter）</strong></h4>
+            </section>
+
+            <section class="profile info-unit">
+                <h2><i class="fa fa-user" aria-hidden="true"></i>基本信息</h2><hr>
+                <ul>
+                    <li><label>个人信息</label><span>张玥 / 女 / 30岁</span></li>
+                    <li><label>英语水平</label><span>CET-6、BEC V，可作为工作语言</span></li>
+                </ul>
+            </section>
+
+            <section class="work info-unit">
+                <h2><i class="fa fa-pencil" aria-hidden="true"></i>专业能力</h2><hr>
+                <p>· 具备 Flutter 项目 0→1 经验，熟悉 Riverpod、Provider、GetX、go_router 及模块化架构</p>
+                <p>· 熟练掌握 Dart 异步编程与 Flutter UI 开发，具备跨平台组件抽取和状态管理经验</p>
+                <p>· 熟悉 Flutter 与 iOS 原生通信，使用 Pigeon 实现 Flutter-iOS 类型安全通信</p>
+                <p>· 具备 Swift / SwiftUI 原生开发能力，可独立处理跨端适配、原生能力接入和线上问题</p>
+                <p>· 熟悉 HTML、CSS、JavaScript、Electron、微信小程序及 H5 相关开发</p>
+                <p>· 熟悉模块化设计、组件复用、网络请求、路由、状态管理和性能优化</p>
+                <p>· 具备自动化构建、发包、OTA 制品生成、OSS 上传和 App Store 发布经验</p>
+                <p>· 具备本地 CI/CD Check、SwiftLint、SwiftFormat、单元测试和 Code Review 实践</p>
+            </section>
+
+            <section class="contact info-unit">
+                <h2><i class="fa fa-phone" aria-hidden="true"></i>联系方式</h2><hr>
+                <ul>
+                    <li><label><i class="fa fa-phone"></i></label><a href="tel:18888172136">18888172136</a></li>
+                    <li><label><i class="fa fa-envelope"></i></label><a href="mailto:estherzhangcode@gmail.com">estherzhangcode@gmail.com</a></li>
+                    <li><label><i class="fa fa-file-text-o"></i></label><a href="https://estherzhang.github.io" target="_blank" rel="noopener">网站：estherzhang.github.io</a></li>
+                    <li><label><i class="fa fa-github" aria-hidden="true"></i></label><a href="https://github.com/estherzhangcode" target="_blank" rel="noopener">github.com/estherzhangcode</a></li>
+                </ul>
+            </section>
+
+            <section class="edu info-unit">
+                <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i>教育经历</h2><hr>
+                <ul><li>
+                    <h3><p>苏州大学应用技术学院 —— 本科</p><p>专业：计算机科学与技术</p></h3>
+                    <time>时间：<mark>2013.9-2017.7</mark></time>
+                    <p>GPA：<mark>4.38/5.0</mark></p>
+                </li></ul>
+            </section>
+
+            <section class="skill info-unit">
+                <h2><i class="fa fa-code" aria-hidden="true"></i>核心技能</h2><hr>
+                <p><strong>Flutter：</strong>Dart、Flutter、Riverpod、Provider、GetX、go_router、Pigeon</p>
+                <p><strong>移动端：</strong>Swift、SwiftUI、Objective-C、MVVM、RxSwift、TCA</p>
+                <p><strong>Web / 跨端：</strong>HTML、CSS、JavaScript、Electron、微信小程序、H5 混合开发</p>
+                <p><strong>工程能力：</strong>组件化、状态管理、网络层、路由、性能优化、自动化发布</p>
+                <p><strong>质量保障：</strong>Unit Tests、UITests、SwiftLint、SwiftFormat、CI/CD Check、Code Review</p>
+            </section>
+        </section>
+
+        <section class="main">
+            <section class="project info-unit">
+                <h2><i class="fa fa-paper-plane" aria-hidden="true"></i>工作经历</h2><hr>
+                <ul>
+                    <li><h3><span>【高级 iOS 工程师】：KN Group</span><time>2026.02-至今</time></h3>
+                        <ul class="info-content"><li><i class="fa fa-paper-plane-o"></i>[参与项目]：Cashmex（墨西哥市场）</li>
+                        <li><i class="fa fa-bars"></i>[主要贡献]<p>1、全面负责 Cashmex 移动端从需求分析、架构设计、功能开发、测试验证到版本发布与 App Store 上架的完整交付。<br>2、基于 SwiftUI、async/await 和 ObservableObject 组织页面状态与业务流程，覆盖注册登录、身份认证、授信申请、银行卡绑定、还款与优惠券等核心链路。<br>3、基于 Alamofire 封装统一 APIService，集中处理 Codable 解码、业务错误、网络重试与 HMAC-SHA256 请求签名。<br>4、抽取网络、表单、导航、弹窗、图片、Banner、Loading 等通用组件，建立可复用的项目组件层。<br>5、搭建发包 Skill 和本地 Review Skill，覆盖版本管理、签名预检、IPA/OTA 制品生成、OSS 上传、SwiftLint、SwiftFormat、单元测试和 CI/CD Check。</p></li></ul>
+                    </li>
+                    <li><h3><span>【iOS / Flutter 工程师】：英语流利说</span><time>2025.01-2025.12</time></h3>
+                        <ul class="info-content"><li><i class="fa fa-paper-plane-o"></i>[参与项目]：流利说小语种（Flutter）、英语流利说、流利说少儿英语、流利说雅思</li>
+                        <li><i class="fa fa-bars"></i>[主要贡献]<p>1、主导 Lingojoy Flutter 端开发，搭建模块化架构和可复用组件体系。<br>2、负责多产品直播播放器升级和跨产品能力复用，推动高频迭代与稳定上线。<br>3、负责 Flutter / iOS 模块的日常维护、需求交付和跨团队协作。</p></li></ul>
+                    </li>
+                    <li><h3><span>【iOS / Flutter 工程师】：Wiredcraft</span><time>2021.03-2024.04</time></h3>
+                        <ul class="info-content"><li><i class="fa fa-paper-plane-o"></i>[参与项目]：Adidas、Confirmed、Cybex、Zara 小程序</li>
+                        <li><i class="fa fa-bars"></i>[主要贡献]<p>1、主导 Cybex Flutter 项目从 0 到 1，使用 GetX 实现网络请求、路由跳转和状态管理。<br>2、通过 Pigeon 实现 Flutter 与 iOS 原生通信，支持跨端能力集成和长期迭代维护。<br>3、基于 SwiftUI + TCA 和 RxSwift + MVVM 开发多个业务模块，抽取 BaseList 等可复用组件。<br>4、使用 JavaScript、WXML、WXSS 支持 Zara 微信小程序开发，并使用 Cocos2d + TypeScript 实现 3D 鞋模型材质、颜色替换和手势操作。<br>5、编写 Unit Tests、UITests 和 XCUITest，覆盖核心交易链路。</p></li></ul>
+                    </li>
+                    <li><h3><span>【iOS 工程师】：徕卡测量系统（上海）有限公司</span><time>2018.11-2021.02</time></h3>
+                        <ul class="info-content"><li><i class="fa fa-paper-plane-o"></i>[参与项目]：海猫商城、LGSForce、徕卡头条、网页生成工具</li>
+                        <li><i class="fa fa-bars"></i>[主要贡献]<p>1、参与电商 App 核心流程开发，覆盖用户、购物车、订单和支付。<br>2、使用 Electron + HTML/JavaScript 构建内部网页生成工具，支持运营与内容生产流程。<br>3、负责内部 App 的 UI 设计、开发、维护与版本交付。</p></li></ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="project info-unit">
+                <h2><i class="fa fa-terminal" aria-hidden="true"></i>重点项目</h2><hr>
+                <ul>
+                    <li><h3><span>英语流利说 App（iOS）</span><time>2025.06-2025.12</time></h3>
+                        <ul class="info-content"><li><i class="fa fa-bars"></i>主导直播播放器能力升级，将原有方案迁移至腾讯直播 SDK，优化卡顿、白板不同步等关键体验问题。</li><li><i class="fa fa-bars"></i>基于 MVVM + RxSwift + Diffable DataSource 开发社区“热门话题/热帖”列表，通过异步布局与分批 diff 更新降低主线程压力，提升滚动流畅度。</li><li><i class="fa fa-bars"></i>抽取课程列表、课程卡片等跨业务复用 UI 组件，支持基于 UTC 的多时区课程时间排序；结合业务日志、Crash 分析和真实用户行为数据定位线上问题。</li></ul>
+                    </li>
+                    <li><h3><span>Richmee（个人项目，Flutter，DAU：520+）</span><time>2025.04-至今</time></h3>
+                        <ul class="info-content"><li><i class="fa fa-paper-plane-o"></i>记账与成就系统结合的资产管理 App，使用 Figma 完成完整 UI/UX 设计。</li><li><i class="fa fa-bars"></i>使用 Riverpod + go_router 构建模块化架构，使用 Isar 进行本地数据存储，并通过 iOS Shortcuts 实现自动记账。</li><li><i class="fa fa-bars"></i>实现账单管理、提醒机制、分类统计和成就体系，具备完整 Flutter App 的独立设计、开发和发布经验。</li><li><i class="fa fa-link"></i><a href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6752465398&amp;code=R68N7KPLH3XEAJ4HFM" target="_blank" rel="noopener">兑换码体验链接 1</a> · <a href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6752465398&amp;code=X4KNLYYPJJM3HHNX7H" target="_blank" rel="noopener">体验链接 2</a></li></ul>
+                    </li>
+                    <li><h3><span>Cybex Flutter 项目</span><time>2021.03-2023.04</time></h3>
+                        <ul class="info-content"><li><i class="fa fa-paper-plane-o"></i>主导 Flutter 项目从 0 到 1，负责跨平台模块架构、功能开发和长期维护。</li><li><i class="fa fa-bars"></i>使用 GetX 实现网络请求、路由跳转和状态管理，通过 Pigeon 打通 Flutter 与 iOS 原生通信。</li><li><i class="fa fa-bars"></i>结合原生能力和可复用组件支持多端交付，处理跨平台功能一致性和迭代效率问题。</li></ul>
+                    </li>
+                    <li><h3><span>Lingojoy Flutter 端</span><time>2025.01-2025.06</time></h3>
+                        <ul class="info-content"><li><i class="fa fa-paper-plane-o"></i>多语种学习产品，负责 Flutter 端模块的架构、开发和维护，保障跨平台功能一致性。</li><li><i class="fa fa-bars"></i>使用 Provider 进行状态管理，使用 AudioPlayer 和 record 实现 TTS 与 ASR，负责课程模块开发与优化。</li></ul>
+                    </li>
+                    <li><h3><span>跨端 Web 与工具开发</span><time>2018.11-2024.04</time></h3>
+                        <ul class="info-content"><li><i class="fa fa-paper-plane-o"></i>使用 Electron + HTML/JavaScript 构建内部网页生成工具，支持运营和内容生产流程。</li><li><i class="fa fa-bars"></i>基于 JavaScript、WXML、WXSS 开发微信小程序；结合 Cocos2d + TypeScript 实现 3D 鞋模型材质、颜色替换和手势交互。</li><li><i class="fa fa-bars"></i>具备移动端原生、Flutter、小程序、Electron 和 H5 之间的技术协作与混合开发经验。</li></ul>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </article>
+
+    <footer class="footer"><p><b>感谢您花时间阅读我的简历，期待能有机会和您共事</b></p></footer>
+    <script src="./assets/js/about.js" type="text/javascript"></script>
+</body>
+</html>
