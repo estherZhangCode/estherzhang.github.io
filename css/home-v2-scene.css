@@ -1,12 +1,12 @@
 /* First-screen scene refinements. Loaded after the main page styles. */
 .sky {
   z-index: 1;
-  background: url('../img/sky.png') center / cover no-repeat;
+  background: url('../img/sky.webp') center / cover no-repeat;
 }
 
 .lake {
   z-index: 2;
-  background: url('../img/lake.png') center / cover no-repeat;
+  background: url('../img/lake.webp') center / cover no-repeat;
 }
 
 .layer-dark {
@@ -90,7 +90,7 @@
   height: 146.667px;
   opacity: 0.9;
   visibility: visible;
-  background-image: url('../img/bush.png');
+  background-image: url('../img/bush.webp');
   background-position: left bottom;
   background-size: 297.833px 146.667px;
   background-repeat: repeat-x;

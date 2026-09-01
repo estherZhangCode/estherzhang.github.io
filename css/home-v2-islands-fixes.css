@@ -23,7 +23,7 @@ body {
 }
 
 body {
-  background: url('../img/lake.png') center top / 100% 100vh repeat-y;
+  background: url('../img/lake.webp') center top / 100% 100vh repeat-y;
 }
 
 .projects-lagoon,
@@ -64,7 +64,7 @@ footer {
 .project-island-row::before {
   left: -2%;
   bottom: 4%;
-  background-image: url('../img/lotus1.png');
+  background-image: url('../img/lotus1.webp');
 }
 
 .project-island-row::after {
@@ -72,7 +72,7 @@ footer {
   right: -1%;
   width: min(13vw, 190px);
   height: 29%;
-  background-image: url('../img/lotus2.png');
+  background-image: url('../img/lotus2.webp');
   animation-duration: 8.4s;
   animation-delay: -2.7s;
 }
@@ -82,7 +82,7 @@ footer {
   bottom: auto;
   width: min(12vw, 180px);
   height: 27%;
-  background-image: url('../img/lotus2.png');
+  background-image: url('../img/lotus2.webp');
   animation-delay: -3.8s;
 }
 
@@ -91,7 +91,7 @@ footer {
   bottom: 3%;
   width: min(16vw, 235px);
   height: 36%;
-  background-image: url('../img/lotus1.png');
+  background-image: url('../img/lotus1.webp');
 }
 
 .project-island-row:nth-child(3n)::before {
