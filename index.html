@@ -1,232 +1,319 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yue Zhang is a senior iOS and Flutter engineer building reliable, thoughtful mobile products.">
-  <meta name="theme-color" content="#09090a">
-  <title>Yue Zhang — Mobile Engineer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Yue Zhang，来自上海的移动端与 AI Native 工程师。">
+  <meta name="theme-color" content="#e8eee5">
+  <title>Yue Zhang — Mobile & AI Native Engineer</title>
   <link rel="icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <script>document.documentElement.classList.add('js')</script>
-  <link rel="stylesheet" href="css/home-redesign.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Noto+Serif+SC:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/home-v2.css">
+  <link rel="stylesheet" href="css/home-v2-scene.css">
+  <link rel="stylesheet" href="css/home-v2-islands.css">
+  <link rel="stylesheet" href="css/home-v2-islands-fixes.css">
+  <link rel="stylesheet" href="css/home-v2-about-islet.css">
+  <link rel="stylesheet" href="css/bgm.css">
 </head>
 <body>
-  <div class="page-noise" aria-hidden="true"></div>
-  <header class="site-header" data-header>
-    <a class="mark" href="#top" aria-label="Yue Zhang, home"><span>Y</span><span>Z</span></a>
-    <nav class="nav-pill is-open" aria-label="Primary navigation">
-      <span class="nav-gesture" aria-hidden="true"><i></i></span>
-      <div class="nav-links"><a href="#work">Work</a><a href="#about">About</a></div>
-      <span class="nav-indicator" aria-hidden="true"></span>
-    </nav>
-    <div class="header-meta">
-      <span class="availability"><i></i> Available</span>
-      <time data-local-time aria-label="Local time in Shanghai">Shanghai</time>
-    </div>
-  </header>
-
+  <a class="corner-contact" href="mailto:estherzhangcode@gmail.com" aria-label="Contact Yue Zhang by email">
+    <img class="corner-contact__cloud" src="img/cloud.png" alt="" aria-hidden="true">
+    <span>Contact</span>
+  </a>
   <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">Senior iOS · Flutter · AI-Native Engineer</p>
-        <h1 id="hero-title">Yue Zhang</h1>
-        <p class="hero-subtitle">Building reliable mobile products<br>and AI-powered engineering workflows.</p>
-      </div>
-      <div class="hero-world reveal" aria-label="Yue's mobile engineering and AI-native capabilities">
-        <div class="world-glow" aria-hidden="true"></div>
-        <div class="skill-orbit orbit-outer" aria-hidden="true"></div>
-        <div class="skill-orbit orbit-inner" aria-hidden="true"></div>
-        <div class="ai-core" data-depth="1.2">
-          <span class="core-kicker">AI Native</span>
-          <b aria-hidden="true">✦</b>
-          <strong>Build smarter.</strong>
-          <small>Prototype · automate · review · ship</small>
-        </div>
-        <article class="skill-node skill-swift" data-depth="0.65">
-          <div class="skill-node-meta"><i></i><span>01</span></div>
-          <strong>Swift</strong><small>SwiftUI · UIKit · TCA</small><b aria-hidden="true">{ }</b>
-        </article>
-        <article class="skill-node skill-flutter" data-depth="0.9">
-          <div class="skill-node-meta"><i></i><span>02</span></div>
-          <strong>Flutter</strong><small>Riverpod · GetX · Pigeon</small><b aria-hidden="true">◇</b>
-        </article>
-        <article class="skill-node skill-product" data-depth="0.5">
-          <div class="skill-node-meta"><i></i><span>03</span></div>
-          <strong>Product engineering</strong><small>UX detail · ownership · delivery</small><b aria-hidden="true">↗</b>
-        </article>
-        <div class="skill-rail" aria-label="AI-native engineering skills">
-          <span>Agentic coding</span><span>Rapid prototypes</span><span>Review systems</span><span>Release automation</span>
-        </div>
-        <p class="world-caption">Mobile craft × AI leverage × product ownership</p>
-      </div>
-    </section>
-
-    <section class="about-showcase section-shell" id="about" aria-labelledby="about-title">
-      <article class="about-story reveal">
-        <div class="story-block">
-          <p class="section-kicker">Today</p>
-          <h2 id="about-title">I’m a mobile engineer based in Shanghai, currently leading end-to-end iOS delivery for a financial product serving the Mexican market.</h2>
-        </div>
-        <div class="story-block">
-          <p class="section-kicker">Background</p>
-          <p>Nearly nine years of iOS work taught me that good engineering is more than code. It is architecture that stays clear, interactions that feel effortless and a release process the whole team can trust.</p>
-        </div>
-        <div class="story-block">
-          <p class="section-kicker">Growth</p>
-          <p>I started with UIKit and Objective-C, grew with Swift, SwiftUI and reactive architectures, then expanded into Flutter and product design. That range helps me move comfortably between user needs, visual detail and implementation constraints.</p>
-        </div>
-        <div class="story-block">
-          <p class="section-kicker">AI Native</p>
-          <p>I use AI coding workflows to move from idea to working prototype, generate engineering scaffolds and automate repetitive delivery work. I have built reusable review and release skills covering linting, tests, signing checks, IPA/OTA artifacts and CI/CD checks.</p>
-        </div>
-        <div class="story-block">
-          <p class="section-kicker">Goal</p>
-          <p>I want to build useful products with calm interfaces — software that feels thoughtful on day one and remains dependable after years of change.</p>
-        </div>
-        <a class="text-link" href="about/about_mobile.html">View full résumé <span>↗</span></a>
-      </article>
-
-      <div class="memory-grid">
-        <article class="memory-card memory-mountain reveal">
-          <img src="img/about.jpg" alt="Yue Zhang standing in front of Mount Fuji">
-          <span class="memory-label">wanders</span>
-          <div class="music-player music-blue">
-            <div class="album-art album-one"><span>♪</span></div>
-            <div class="track-copy"><strong>Choose your song</strong><span>Spotify or Apple Music</span></div>
-            <span class="music-service" aria-hidden="true">◉</span>
-            <button class="play-button" type="button" disabled aria-label="Song link needed">▶</button>
+    <section class="voyage" aria-label="江南水乡航行动画">
+      <div class="voyage-stage">
+        <div class="scene">
+          <div class="sky"></div>
+          <div class="loop layer-dark" data-speed=".18">
+            <div class="tile darktree-tile"><img class="darktree-main" src="img/darktree.png" alt=""><img class="darktree-bridge" src="img/darktree.png" alt=""></div>
+            <div class="tile darktree-tile"><img class="darktree-main" src="img/darktree.png" alt=""><img class="darktree-bridge" src="img/darktree.png" alt=""></div>
           </div>
-        </article>
-
-        <article class="memory-card memory-flow reveal">
-          <img src="img/flow.jpg" alt="Yue Zhang smiling on a boat during an island trip">
-          <span class="memory-label">flow</span>
-          <div class="music-player music-plum">
-            <div class="album-art album-two"><span>♪</span></div>
-            <div class="track-copy"><strong>Choose your song</strong><span>Spotify or Apple Music</span></div>
-            <span class="music-service" aria-hidden="true">◉</span>
-            <button class="play-button" type="button" disabled aria-label="Song link needed">▶</button>
+          <div class="loop layer-trees" data-speed=".3">
+            <div class="tile tree-tile"><img class="tree t1" src="img/tree1.png" alt=""><img class="tree t2" src="img/tree2.png" alt=""><img class="tree t3" src="img/tree1.png" alt=""></div>
+            <div class="tile tree-tile"><img class="tree t1" src="img/tree1.png" alt=""><img class="tree t2" src="img/tree2.png" alt=""><img class="tree t3" src="img/tree1.png" alt=""></div>
           </div>
-        </article>
-
-        <article class="memory-card memory-pets reveal">
-          <img src="img/pets.jpg" alt="Yue Zhang holding her dog beneath blooming trees">
-          <span class="memory-label">pets</span>
-          <div class="music-player music-coral">
-            <div class="album-art album-three"><span>♪</span></div>
-            <div class="track-copy"><strong>Choose your song</strong><span>Song link needed</span></div>
-            <span class="music-service" aria-hidden="true">◉</span>
-            <button class="play-button" type="button" disabled aria-label="Song link needed">▶</button>
+          <div class="loop layer-bush"><div class="tile bush-tile"><img src="img/bush.png" alt=""></div><div class="tile bush-tile"><img src="img/bush.png" alt=""></div></div>
+          <div class="lake"></div>
+          <div class="loop layer-lotus lotus-far"><div class="tile lotus-tile"><img src="img/lotus1.png" alt=""><img src="img/lotus2.png" alt=""><img src="img/lotus1.png" alt=""></div><div class="tile lotus-tile"><img src="img/lotus1.png" alt=""><img src="img/lotus2.png" alt=""><img src="img/lotus1.png" alt=""></div></div>
+          <div class="loop layer-lotus lotus-near"><div class="tile lotus-tile"><img src="img/lotus2.png" alt=""><img src="img/lotus1.png" alt=""><img src="img/lotus2.png" alt=""></div><div class="tile lotus-tile"><img src="img/lotus2.png" alt=""><img src="img/lotus1.png" alt=""><img src="img/lotus2.png" alt=""></div></div>
+          <div class="boat-track">
+            <span class="wake"></span>
+            <span class="oar-ripples" aria-hidden="true"><i></i><i></i><i></i></span>
+            <div class="boat-bob">
+              <img class="boat-frame is-active" src="img/boat_01.png" alt="">
+              <img class="boat-frame" src="img/boat_02.png" alt="">
+              <img class="boat-frame" src="img/boat_03.png" alt="">
+              <img class="boat-frame" src="img/boat_04.png" alt="">
+              <img class="boat-frame" src="img/boat_05.png" alt="">
+              <img class="boat-frame" src="img/boat_06.png" alt="">
+              <img class="boat-frame" src="img/boat_07.png" alt="">
+              <img class="boat-frame" src="img/boat_08.png" alt="">
+              <img class="boat-frame" src="img/boat_09.png" alt="">
+              <img class="boat-frame" src="img/boat_10.png" alt="">
+              <img class="boat-frame" src="img/boat_11.png" alt="">
+              <img class="boat-frame" src="img/boat_12.png" alt="">
+            </div>
+            <button class="boat-contact-trigger" type="button" aria-controls="boat-profile" aria-expanded="false"><span class="visually-hidden">展开 Yue Zhang 的联系方式与技能</span><span class="boat-click-label" aria-hidden="true">Meet me</span></button>
           </div>
-        </article>
-
-        <article class="memory-card memory-travel reveal">
-          <img src="img/travel.jpg" alt="Yue Zhang travelling through a rainy mountain town">
-          <span class="memory-label">travel</span>
-          <div class="music-player music-violet">
-            <div class="album-art album-four"><span>♪</span></div>
-            <div class="track-copy"><strong>Choose your song</strong><span>Song link needed</span></div>
-            <span class="music-service" aria-hidden="true">◉</span>
-            <button class="play-button" type="button" disabled aria-label="Song link needed">▶</button>
+          <div class="reed-foreground">
+            <div class="reed-loop">
+              <div class="reed-tile">
+                <img class="reed-clump reed-a" src="img/reedbed.png" alt="">
+                <img class="reed-clump reed-b" src="img/reedbed.png" alt="">
+                <img class="reed-clump reed-c" src="img/reedbed.png" alt="">
+                <img class="reed-clump reed-d" src="img/reedbed.png" alt="">
+              </div>
+              <div class="reed-tile" aria-hidden="true">
+                <img class="reed-clump reed-a" src="img/reedbed.png" alt="">
+                <img class="reed-clump reed-b" src="img/reedbed.png" alt="">
+                <img class="reed-clump reed-c" src="img/reedbed.png" alt="">
+                <img class="reed-clump reed-d" src="img/reedbed.png" alt="">
+              </div>
+            </div>
           </div>
-        </article>
+          <button class="profile-dim" type="button" aria-label="关闭个人信息" tabindex="-1"></button>
+          <aside class="boat-profile" id="boat-profile" aria-hidden="true" inert>
+            <div class="boat-profile-paper">
+              <figure class="boat-profile-avatar" aria-hidden="true"><img src="img/about.jpg" alt=""></figure>
+              <p class="boat-profile-kicker">Yue Zhang · Shanghai</p>
+              <h2>Mobile engineer<br>&amp; AI-native builder.</h2>
+              <div class="boat-profile-skills" aria-label="基础技能">
+                <span>Swift</span><span>SwiftUI</span><span>UIKit</span><span>Flutter</span><span>HTML/CSS/JS</span><span>AI workflows</span><span>CI/CD</span>
+              </div>
+              <div class="boat-profile-links">
+                <a href="mailto:estherzhangcode@gmail.com">Email ↗</a>
+                <a href="about/about_mobile.html">Résumé ↗</a>
+              </div>
+            </div>
+            <span class="boat-profile-roll" aria-hidden="true"></span>
+          </aside>
+        </div>
       </div>
     </section>
 
-    <section class="experience section-shell" aria-labelledby="experience-title">
-      <div class="experience-card reveal">
-        <div class="experience-card-head">
-          <p class="section-kicker" id="experience-title">Recent experiences</p>
-          <a href="about/about_mobile.html">View all ↗</a>
+    <section class="projects-lagoon" id="work" aria-labelledby="projects-title">
+      <div class="lagoon-backdrop" aria-hidden="true"></div>
+      <h2 class="visually-hidden" id="projects-title">个人作品展示</h2>
+      <div class="island-list">
+        <div class="project-island-row">
+          <article class="project-island">
+            <img class="island-shape" src="img/island1.png" alt="">
+            <a class="island-media" href="img/portfolio-1.jpg" target="_blank" rel="noopener"><img src="img/portfolio-1.jpg" alt="Cashmex 金融产品"></a>
+            <div class="island-copy"><span>01 · Fintech · iOS</span><h3>Cashmex</h3><p>独立负责完整 iOS 交付：主导搭建本地打测试包 Skill，替代测试手动打包流程；以 SwiftUI 模块化架构与 mock 工具落地 AI-native 应用能力。</p></div>
+          </article>
         </div>
-        <div class="company-list">
-          <article class="company-row">
-            <div class="company-logo logo-kn"><img src="img/kn.jpeg" alt="KN Group logo"></div>
-            <div class="company-copy"><strong>Senior iOS Engineer</strong><span>KN Group · Cashmex</span></div>
-            <time>Present</time>
+        <div class="project-island-row">
+          <article class="project-island">
+            <img class="island-shape" src="img/island2.png" alt="">
+            <a class="island-media" href="https://apps.apple.com/cn/app/id597364850" target="_blank" rel="noopener"><img src="img/portfolio-2.jpg" alt="Liulishuo English 学习产品"></a>
+            <div class="island-copy"><span>02 · Education · iOS</span><h3>Liulishuo English</h3><p>主导多产品直播播放器升级至腾讯直播 SDK，课程完成率提升约 34%；以 MVVM + RxSwift + Diffable DataSource 构建百万级 DAU 社区热帖信息流。</p><a href="https://apps.apple.com/cn/app/id597364850" target="_blank" rel="noopener">App Store ↗</a></div>
           </article>
-          <article class="company-row">
-            <div class="company-logo logo-liulishuo"><img src="img/lls.jpeg" alt="英语流利说 logo"></div>
-            <div class="company-copy"><strong>iOS / Flutter Engineer</strong><span>Liulishuo</span></div>
-            <time>2025</time>
+        </div>
+        <div class="project-island-row">
+          <article class="project-island">
+            <img class="island-shape" src="img/island1.png" alt="">
+            <a class="island-media" href="https://apps.apple.com/cn/app/richmee-expense-budget-tracker/id6752465398?l=en-GB" target="_blank" rel="noopener"><img src="img/portfolio-3.jpg" alt="Richmee 财务应用"></a>
+            <div class="island-copy"><span>03 · Personal product · Flutter</span><h3>Richmee</h3><p>设计并发布模块化财务应用，使用 Flutter 完成 iOS 与 Android 双端交付，涵盖记账、统计、提醒、成就和 iOS Shortcuts。</p><a href="https://apps.apple.com/cn/app/richmee-expense-budget-tracker/id6752465398?l=en-GB" target="_blank" rel="noopener">App Store ↗</a></div>
           </article>
-          <article class="company-row">
-            <div class="company-logo logo-wiredcraft"><img src="img/wiredcraft.jpeg" alt="Wiredcraft logo"></div>
-            <div class="company-copy"><strong>iOS / Flutter Engineer</strong><span>Wiredcraft</span></div>
-            <time>2021 — 2024</time>
+        </div>
+        <div class="project-island-row">
+          <article class="project-island">
+            <img class="island-shape" src="img/island2.png" alt="">
+            <a class="island-media" href="https://apps.apple.com/us/app/%E5%AE%A0%E7%89%A9%E7%88%AA-petpaw/id6783274509?l=zh-Hans-CN" target="_blank" rel="noopener"><img src="img/portfolio-4.jpg" alt="PetPaw 宠物照护应用"></a>
+            <div class="island-copy"><span>04 · Personal product · Flutter</span><h3>PetPaw</h3><p>从概念、设计、开发到上架，独立完成宠物日记与照护提醒产品。</p><a href="https://apps.apple.com/us/app/%E5%AE%A0%E7%89%A9%E7%88%AA-petpaw/id6783274509?l=zh-Hans-CN" target="_blank" rel="noopener">App Store ↗</a></div>
           </article>
-          <article class="company-row">
-            <div class="company-logo logo-leica"><img src="img/leica.jpeg" alt="Leica Geosystems logo"></div>
-            <div class="company-copy"><strong>iOS Engineer</strong><span>Leica Geosystems</span></div>
-            <time>2018 — 2021</time>
+        </div>
+        <div class="project-island-row">
+          <article class="project-island">
+            <img class="island-shape" src="img/island1.png" alt="">
+            <a class="island-media" href="https://apps.apple.com/us/app/adidas-shop-shoes-clothing/id1266591536" target="_blank" rel="noopener"><img src="img/portfolio-5.jpg" alt="Adidas 商城体验"></a>
+            <div class="island-copy"><span>05 · Commerce · iOS</span><h3>Adidas</h3><p>使用 SwiftUI 与 TCA 开发定制、尺码选择及高流量购物体验。</p><a href="https://apps.apple.com/us/app/adidas-shop-shoes-clothing/id1266591536" target="_blank" rel="noopener">App Store ↗</a></div>
+          </article>
+        </div>
+        <div class="project-island-row">
+          <article class="project-island">
+            <img class="island-shape" src="img/island2.png" alt="">
+            <a class="island-media" href="https://apps.apple.com/us/app/confirmed-sneakers-more/id1508115448" target="_blank" rel="noopener"><img src="img/portfolio-6.jpg" alt="CONFIRMED 潮流电商应用"></a>
+            <div class="island-copy"><span>06 · Sneaker culture · iOS</span><h3>CONFIRMED</h3><p>基于 MVVM + RxSwift 构建可复用订单架构，并以 Core Animation 实现 3D 卡片、光效与结果动画。</p><a href="https://apps.apple.com/us/app/confirmed-sneakers-more/id1508115448" target="_blank" rel="noopener">App Store ↗</a></div>
+          </article>
+        </div>
+        <div class="project-island-row">
+          <article class="project-island">
+            <img class="island-shape" src="img/island1.png" alt="">
+            <a class="island-media" href="https://apps.apple.com/us/app/cybex/id6474168019" target="_blank" rel="noopener"><img src="img/portfolio-7.jpg" alt="Cybex SensorSafe 智能硬件产品"></a>
+            <div class="island-copy"><span>07 · Connected product · Flutter</span><h3>Cybex SensorSafe</h3><p>从零到一主导 Flutter 产品，以 GetX 和 Pigeon 完成架构、状态与原生通信，并实现与传感器硬件的蓝牙交互。</p><a href="https://apps.apple.com/us/app/cybex/id6474168019" target="_blank" rel="noopener">App Store ↗</a></div>
+          </article>
+        </div>
+        <div class="project-island-row island-final">
+          <article class="project-island">
+            <img class="island-shape" src="img/island2.png" alt="">
+            <a class="island-media" href="#小程序://ZARA/ZARA/Lqdrph7A2pMZsoe"><img src="img/portfolio-8.jpg" alt="Zara 微信小程序"></a>
+            <div class="island-copy"><span>08 · Mini program</span><h3>Zara</h3><p>负责达人穿搭模块：运营发布穿搭帖，展示达人上身效果，图片标注商品标签，并交付高流量微信小程序。</p><a href="#小程序://ZARA/ZARA/Lqdrph7A2pMZsoe">微信小程序 ↗</a></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="work section-shell" id="work" aria-labelledby="work-title">
-      <div class="section-heading reveal">
-        <div><p class="section-kicker">Selected work</p><h2 id="work-title">Products built for<br>real-world use.</h2></div>
-        <p>Commerce, connected devices, education and tools — engineered from interface detail to production reliability.</p>
-      </div>
-      <div class="project-list">
-        <a class="project-card project-wide reveal" href="img/portfolio-1.jpg" target="_blank" rel="noopener">
-          <img src="img/portfolio-1.jpg" alt="Cashmex financial product displayed on two iPhones"><div class="project-overlay"></div>
-          <div class="project-info"><span>01 · Fintech · iOS</span><h3>Cashmex</h3><p>Owned the complete iOS delivery, from SwiftUI architecture and secure networking to testing, release and App Store submission.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
-        </a>
-        <div class="project-pair">
-          <a class="project-card project-image-right reveal" href="img/portfolio-2.jpg" target="_blank" rel="noopener">
-            <img src="img/portfolio-2.jpg" alt="English Liulishuo learning experience displayed on two iPhones"><div class="project-overlay"></div>
-            <div class="project-info"><span>02 · Education · iOS</span><h3>Liulishuo English</h3><p>Built course, community and live-learning experiences, including a reusable player upgrade and high-performance topic feeds.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a class="project-card reveal" href="https://apps.apple.com/cn/app/richmee-expense-budget-tracker/id6752465398?l=en-GB" target="_blank" rel="noopener">
-            <img src="img/portfolio-3.jpg" alt="Richmee expense and achievement app displayed on three iPhones"><div class="project-overlay"></div>
-            <div class="project-info"><span>03 · Personal product · Flutter</span><h3>Richmee</h3><p>Designed and shipped a modular finance app with expense tracking, statistics, reminders, achievements and iOS Shortcuts.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
-          </a>
+    <section class="about-water" id="about" aria-labelledby="about-title">
+      <section class="about-islet-section" aria-label="湖心 About me">
+        <div class="about-islet-sticky">
+          <div class="about-fog about-fog-back" aria-hidden="true">
+            <img class="about-fog-a" src="img/fog.png" alt="">
+            <img class="about-fog-b" src="img/fog.png" alt="">
+          </div>
+
+          <svg class="about-ripples" viewBox="0 0 1200 620" aria-hidden="true">
+            <ellipse cx="600" cy="342" rx="418" ry="164"></ellipse>
+            <ellipse cx="600" cy="342" rx="492" ry="197"></ellipse>
+            <ellipse cx="600" cy="342" rx="560" ry="226"></ellipse>
+          </svg>
+
+          <div class="about-islet-scroll">
+            <div class="about-islet-float">
+              <img class="about-islet-image" src="img/lotusleaf.png" alt="">
+            </div>
+          </div>
+
+          <div class="about-copy" aria-live="polite">
+            <article class="about-step is-active" aria-hidden="false">
+              <span>02 / ABOUT ME</span>
+              <h2 id="about-title">移动端与 AI-Native 工程师，<br>也是把产品真正交付出去的人。</h2>
+              <p>近 9 年 iOS 与 Flutter 产品开发经验，参与过金融、教育、电商与智能硬件产品，从体验设计、架构实现到测试发布。</p>
+              <div class="about-proof"><i>2017—Now</i><i>iOS · Flutter</i><i>Shanghai</i></div>
+            </article>
+            <article class="about-step" aria-hidden="true">
+              <span>HOW I WORK</span>
+              <h2>把复杂需求，<br>拆成可以稳定落地的产品。</h2>
+              <ul class="about-work-list">
+                <li><strong>体验</strong><em>让复杂交互保持清晰、自然</em></li>
+                <li><strong>工程</strong><em>构建可持续演进的多端架构</em></li>
+                <li><strong>交付</strong><em>把测试、发布和维护纳入流程</em></li>
+              </ul>
+            </article>
+            <article class="about-step" aria-hidden="true">
+              <span>CURRENT PRACTICE</span>
+              <h2>把 Agent 和自动化，<br>放进真实的开发流程。</h2>
+              <p>目前正在实践 AI 辅助需求理解、代码评审、测试验证与版本发布，让移动端交付更快，也更可靠。</p>
+              <div class="about-proof"><i>Agentic Coding</i><i>Automated Review</i><i>CI/CD</i></div>
+            </article>
+          </div>
+
+          <div class="about-fog about-fog-front" aria-hidden="true">
+            <img class="about-fog-c" src="img/fog.png" alt="">
+            <img class="about-fog-d" src="img/fog.png" alt="">
+            <img class="about-fog-e" src="img/fog.png" alt="">
+          </div>
+
+          <div class="about-route-lead" aria-hidden="true">
+            <svg viewBox="0 0 420 190" preserveAspectRatio="none">
+              <path d="M8 128 C92 38 182 158 272 82 S366 42 412 24" pathLength="1"></path>
+            </svg>
+            <span>WORK EXPERIENCE</span>
+          </div>
         </div>
-        <div class="project-pair project-pair-offset">
-          <a class="project-card project-image-right reveal" href="https://apps.apple.com/us/app/%E5%AE%A0%E7%89%A9%E7%88%AA-petpaw/id6783274509?l=zh-Hans-CN" target="_blank" rel="noopener">
-            <img src="img/portfolio-4.jpg" alt="PetPaw pet care app displayed on two iPhones"><div class="project-overlay"></div>
-            <div class="project-info"><span>04 · Personal product · Flutter</span><h3>PetPaw</h3><p>Independently designed, built and released a pet diary and care reminder app from concept to App Store.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a class="project-card reveal" href="img/portfolio-5.jpg" target="_blank" rel="noopener">
-            <img src="img/portfolio-5.jpg" alt="Adidas commerce experience displayed on two iPhones"><div class="project-overlay"></div>
-            <div class="project-info"><span>05 · Commerce · iOS</span><h3>Adidas</h3><p>Developed customization, size selection and high-traffic shopping experiences with SwiftUI, TCA and RxSwift.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
-          </a>
+      </section>
+
+      <section class="experience-voyage" id="experience" aria-labelledby="experience-title">
+        <div class="experience-sticky">
+          <div class="experience-frame">
+            <header class="experience-meta">
+              <span id="experience-title">03 / Experience</span>
+              <a class="experience-more" href="about/about_mobile.html">查看更多 ↗</a>
+            </header>
+            <div class="experience-layout">
+              <div class="experience-copy" aria-live="polite">
+                <article class="experience-panel is-active" data-experience-panel="0">
+                  <time>2018—2021</time>
+                  <div class="experience-company">
+                    <img class="experience-logo" src="img/leica.jpeg" alt="">
+                    <h3>Leica Geosystems</h3>
+                  </div>
+                  <h4>iOS / Backend Engineer</h4>
+                  <p>参与连接测量生态中的客户、电商、订单与支付流程，开发 iOS 客户端与后端 Java 服务，并承担内部工具的设计与版本交付。</p>
+                  <small>H-Mall · LGSForce · Leica News</small>
+                </article>
+                <article class="experience-panel" data-experience-panel="1" hidden>
+                  <time>2021—2024</time>
+                  <div class="experience-company">
+                    <img class="experience-logo" src="img/wiredcraft.jpeg" alt="">
+                    <h3>Wiredcraft</h3>
+                  </div>
+                  <h4>iOS / Flutter Engineer</h4>
+                  <p>在品牌、电商和跨端产品中工作，连接视觉细节、复杂交互与工程架构，并主导 Flutter 产品从零到一交付。</p>
+                  <small>Adidas · CONFIRMED · Zara · Cybex</small>
+                </article>
+                <article class="experience-panel" data-experience-panel="2" hidden>
+                  <time>2025</time>
+                  <div class="experience-company">
+                    <img class="experience-logo" src="img/lls.jpeg" alt="">
+                    <h3>Liulishuo</h3>
+                  </div>
+                  <h4>iOS / Flutter Engineer</h4>
+                  <p>负责课程、社区与直播学习场景，优化高性能信息流和多产品播放器，让百万级用户的学习体验更稳定。</p>
+                  <small>English Liulishuo · Live Learning · Community</small>
+                </article>
+                <article class="experience-panel" data-experience-panel="3" hidden>
+                  <time>2026.02—2026</time>
+                  <div class="experience-company">
+                    <img class="experience-logo" src="img/kn.jpeg" alt="">
+                    <h3>KN Group</h3>
+                  </div>
+                  <h4>Senior iOS Engineer</h4>
+                  <p>负责金融产品从 SwiftUI 功能、测试验证到版本发布与 App Store 上架的完整交付，并构建自动化评审与发布工作流。</p>
+                  <small>Cashmex · SwiftUI · AI-Native Delivery</small>
+                </article>
+                <article class="experience-panel experience-panel--beacon" data-experience-panel="4" hidden>
+                  <time>Next</time>
+                  <h3>航线前往灯塔</h3>
+                  <p>所有航标已经亮起，航线继续向前延伸——下一站，是灯塔的暖色光点。</p>
+                </article>
+              </div>
+
+              <div class="experience-route" aria-label="工作经历航线">
+                <svg viewBox="0 0 640 700" preserveAspectRatio="none" role="img" aria-label="从 2018 年至今的职业航线">
+                  <path class="experience-route__base" d="M46 44 C210 18 330 150 268 232 C206 314 118 420 210 498 C300 574 470 600 560 606 S632 652 628 686" pathLength="1"></path>
+                  <path class="experience-route__progress" d="M46 44 C210 18 330 150 268 232 C206 314 118 420 210 498 C300 574 470 600 560 606 S632 652 628 686" pathLength="1"></path>
+                  <circle class="experience-route__marker" cx="46" cy="44" r="4.5"></circle>
+                </svg>
+                <div class="experience-nodes">
+                  <button class="career-buoy is-active" style="--buoy-x:7.2%;--buoy-y:6.3%" type="button" data-experience="0" aria-pressed="true">
+                    <i aria-hidden="true"></i>
+                    <span class="career-buoy__label"><time>2018—2021</time><strong>Leica</strong></span>
+                  </button>
+                  <button class="career-buoy" style="--buoy-x:41.9%;--buoy-y:33.1%" type="button" data-experience="1" aria-pressed="false">
+                    <i aria-hidden="true"></i>
+                    <span class="career-buoy__label"><time>2021—2024</time><strong>Wiredcraft</strong></span>
+                  </button>
+                  <button class="career-buoy" style="--buoy-x:32.8%;--buoy-y:71.1%" type="button" data-experience="2" aria-pressed="false">
+                    <i aria-hidden="true"></i>
+                    <span class="career-buoy__label"><time>2025</time><strong>Liulishuo</strong></span>
+                  </button>
+                  <button class="career-buoy career-buoy--last" style="--buoy-x:87.5%;--buoy-y:86.6%" type="button" data-experience="3" aria-pressed="false">
+                    <i aria-hidden="true"></i>
+                    <span class="career-buoy__label"><time>2026</time><strong>KN Group</strong></span>
+                  </button>
+                </div>
+                <div class="experience-destination" aria-hidden="true">
+                  <span class="experience-beacon"><i></i></span>
+                  <img class="experience-lighthouse" src="img/lighthouse.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="project-pair">
-          <a class="project-card project-image-right reveal" href="img/portfolio-6.jpg" target="_blank" rel="noopener">
-            <img src="img/portfolio-6.jpg" alt="CONFIRMED sneaker commerce app displayed on two iPhones"><div class="project-overlay"></div>
-            <div class="project-info"><span>06 · Sneaker culture · iOS</span><h3>CONFIRMED</h3><p>Created reusable order-list architecture and expressive 3D card, lighting and result animations with Core Animation.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a class="project-card reveal" href="img/portfolio-7.jpg" target="_blank" rel="noopener">
-            <img src="img/portfolio-7.jpg" alt="Cybex SensorSafe connected product displayed on two iPhones"><div class="project-overlay"></div>
-            <div class="project-info"><span>07 · Connected product · Flutter</span><h3>Cybex SensorSafe</h3><p>Led the Flutter product from zero to one, using GetX and Pigeon for architecture, state and native communication.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
-          </a>
-        </div>
-        <div class="project-pair project-pair-offset">
-          <a class="project-card project-image-right reveal" href="img/portfolio-8.jpg" target="_blank" rel="noopener">
-            <img src="img/portfolio-8.jpg" alt="Zara WeChat mini program displayed on two iPhones"><div class="project-overlay"></div>
-            <div class="project-info"><span>08 · Mini program</span><h3>Zara</h3><p>Delivered a high-traffic WeChat experience with JavaScript, WXML and WXSS, plus interactive 3D product tooling.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a class="project-card reveal" href="img/portfolio-9.jpg" target="_blank" rel="noopener">
-            <img src="img/portfolio-9.jpg" alt="H-Mall enterprise commerce and measurement products displayed on two iPhones"><div class="project-overlay"></div>
-            <div class="project-info"><span>09 · Enterprise commerce · iOS</span><h3>H-Mall</h3><p>Built customer, cart, order and payment flows for Leica Geosystems’ connected measurement ecosystem.</p></div><span class="project-arrow" aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </div>
+      </section>
     </section>
 
-    <section class="contact section-shell reveal" id="contact">
-      <p class="section-kicker">Let’s connect</p><h2>Have a product worth<br>building carefully?</h2>
-      <a class="email-link" href="mailto:estherzhangcode@gmail.com">estherzhangcode@gmail.com <span>↗</span></a>
-      <div class="contact-links"><a href="https://github.com/estherzhangcode" target="_blank" rel="noopener">GitHub</a><a href="about/about_duolingo_en.html">Résumé EN</a><a href="about/about_mobile.html">简历 CN</a></div>
-    </section>
   </main>
-  <footer class="site-footer section-shell"><span>© <span data-year></span> Yue Zhang</span><span>Designed & engineered in Shanghai</span><a href="#top">Back to top ↑</a></footer>
-  <script src="js/home-redesign.js"></script>
+  <audio id="bgm-audio" src="assets/music/bgm.m4a" loop preload="auto" autoplay></audio>
+  <button class="bgm-toggle" id="bgm-toggle" type="button" aria-pressed="false" aria-label="播放背景音乐">
+    <span class="bgm-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+  </button>
+  <footer><span>© <span data-year></span> Yue Zhang</span><span>Designed & engineered in Shanghai</span><a href="#top">Back to top ↑</a></footer>
+  <script src="js/home-v2.js"></script>
+  <script src="js/bgm.js"></script>
 </body>
 </html>
