@@ -38,10 +38,10 @@
     boatProfile.setAttribute('aria-hidden', String(!open));
     boatProfile.toggleAttribute('inert', !open);
     boatContactTrigger.setAttribute('aria-expanded', String(open));
-    scene.querySelectorAll('.loop, .reed-loop, .reed-clump, .lotus-tile img, .layer-trees .tree').forEach(element => {
+    scene.querySelectorAll('.loop, .reed-loop').forEach(element => {
       element.getAnimations().forEach(animation => {
-        if (typeof animation.updatePlaybackRate === 'function') animation.updatePlaybackRate(open ? .35 : 1);
-        else animation.playbackRate = open ? .35 : 1;
+        if (typeof animation.updatePlaybackRate === 'function') animation.updatePlaybackRate(open ? .72 : 1);
+        else animation.playbackRate = open ? .72 : 1;
       });
     });
     if (!open) boatContactTrigger.focus({ preventScroll: true });

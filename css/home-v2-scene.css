@@ -612,15 +612,6 @@
   font-weight: 600;
 }
 
-.boat-profile-kicker::before {
-  content: "";
-  display: inline-block;
-  width: 17px;
-  margin-right: 8px;
-  border-top: 1px solid rgba(73, 52, 38, .46);
-  vertical-align: .28em;
-}
-
 .boat-profile h2 {
   padding-right: 82px;
   margin: 0 0 14px;
@@ -836,6 +827,44 @@
 @media (max-width: 760px) {
   .reed-track.reed-left { left: 0; width: 50vw; }
   .reed-track.reed-right { right: 0; width: 40vw; }
+
+  .layer-dark {
+    top: 4%;
+    height: 36%;
+  }
+
+  .layer-trees {
+    top: 20%;
+    height: 30%;
+  }
+
+  .layer-trees .tree {
+    clip-path: inset(0 0 30% 0);
+  }
+
+  /* Keep the boat's centerline clear on narrow screens. */
+  .layer-trees .t1 {
+    left: -8%;
+    width: 28%;
+    height: 92%;
+  }
+
+  .layer-trees .t2 {
+    left: 57%;
+    width: 34%;
+    height: 100%;
+  }
+
+  .layer-trees .t3 {
+    right: -9%;
+    width: 25%;
+    height: 84%;
+  }
+
+  .layer-bush {
+    top: 29%;
+    height: 21%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

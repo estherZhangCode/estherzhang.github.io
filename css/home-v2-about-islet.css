@@ -946,38 +946,58 @@
 
   .experience-meta {
     margin-bottom: 12px;
-    gap: 10px;
+    gap: 12px;
+    align-items: center;
   }
 
-  .experience-meta > span { font-size: 8px; }
+  .experience-meta > span { font-size: 10px; }
 
   .experience-more {
-    padding: 5px 10px;
-    font-size: 8px;
+    min-height: 44px;
+    padding: 0 14px;
+    font-size: 10px;
   }
 
   .experience-layout {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 10px;
+    align-items: stretch;
   }
 
   .experience-copy {
-    min-height: 33vh;
+    min-width: 0;
+    min-height: 34vh;
     max-width: 100%;
+    width: 100%;
   }
 
   .experience-copy::before {
-    inset: -16px -30px;
+    inset: -12px -24px;
+    background: radial-gradient(ellipse at center, rgba(4, 49, 62, .42), rgba(4, 49, 62, .14) 56%, transparent 76%);
+  }
+
+  .experience-panel {
+    top: 0;
+    transform: translate3d(0, 14px, 0);
+  }
+
+  .experience-panel.is-active {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .experience-panel.is-leaving {
+    transform: translate3d(0, -10px, 0);
   }
 
   .experience-panel time {
-    margin-bottom: 9px;
-    font-size: 8px;
+    margin-bottom: 10px;
+    font-size: 10px;
   }
 
   .experience-panel h3 {
-    font-size: clamp(22px, 6.6vw, 28px);
+    font-size: clamp(27px, 7.5vw, 32px);
+    line-height: 1.12;
   }
 
   .experience-company {
@@ -985,37 +1005,51 @@
   }
 
   .experience-logo {
-    width: 30px;
-    height: 30px;
-    padding: 2px;
-    border-radius: 7px;
+    width: 38px;
+    height: 38px;
+    padding: 3px;
+    border-radius: 9px;
   }
 
   .experience-panel h4 {
-    margin: 7px 0 0;
-    font-size: 11px;
+    margin: 9px 0 0;
+    font-size: 13px;
   }
 
   .experience-panel p {
-    margin-top: 10px;
-    font-size: 11.5px;
-    line-height: 1.6;
+    max-width: 34em;
+    margin-top: 13px;
+    color: rgba(245, 240, 222, .9);
+    font-size: 14px;
+    line-height: 1.68;
   }
 
   .experience-panel small {
-    margin-top: 10px;
-    font-size: 8px;
+    margin-top: 12px;
+    color: rgba(245, 240, 222, .68);
+    font-size: 10px;
+    line-height: 1.5;
   }
 
   .experience-route {
-    height: 44vh;
-    min-height: 300px;
+    flex: 1 1 auto;
+    height: 40vh;
+    min-height: 280px;
+    min-width: 0;
+    width: 100%;
   }
 
-  .career-buoy time { font-size: 7.5px; }
-  .career-buoy strong { font-size: 11px; }
-  .career-buoy__label { left: calc(100% + 10px); }
-  .career-buoy--last .career-buoy__label { right: calc(100% + 10px); }
+  .career-buoy time { display: none; }
+  .career-buoy {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+  }
+  .career-buoy strong { font-size: 12px; }
+  .career-buoy i { width: 12px; height: 12px; }
+  .career-buoy__label { left: calc(50% + 18px); }
+  .career-buoy--last .career-buoy__label { right: calc(50% + 18px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
